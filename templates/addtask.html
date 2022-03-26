@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %}
+Kötelességek
+{% endblock %}
+
+{% block body %}
+<form action="/addtask" method="POST">
+      <div class="mb-3" id="name">
+        <label for="subjectName" class="form-label">A tárgy neve</label>
+        <input type="text" class="form-control" name='subjectName'id="subjectName">
+      </div>
+      <div class="mb-3">
+        <label for="deadline" class="form-label">Mikorra kell?</label>
+        <input type="text" class="form-control" name ='subjectDeadline' id="subjectDeadline">
+      </div>
+      <div class="mb-3">
+        <label for="subjectCredits" class="form-label">Hány órát kell vele foglalkozni gyakorlatokon kívül?</label>
+        <input type="number" class="form-control" name ='subjectCredits' id="subjectCredits">
+      </div>
+      <label for="subjectColor" class="form-label">Válassz egy színt!</label>
+      <input type="color" class="form-control form-control-color" name="subjectColor" id="subjectColor" value="#2B65EC" title="Choose your color">
+      <br>
+      <button type="submit" class="btn btn-primary">Hozzáadás</button>
+</form>
+{% endblock %}
